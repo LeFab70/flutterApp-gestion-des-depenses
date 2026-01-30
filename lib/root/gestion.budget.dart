@@ -31,7 +31,7 @@ class GestionBudget extends StatelessWidget {
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: AppColors.buttonBackground,
           foregroundColor: AppColors.buttonTextColor,
-          elevation: 10,
+          elevation: 20,
           shape: CircleBorder(),
         ),
         // iconButtonTheme: IconButtonThemeData(

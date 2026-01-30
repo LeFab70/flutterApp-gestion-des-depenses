@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppBars extends StatelessWidget implements PreferredSize{
-  const AppBars({super.key});
+  final VoidCallback onPressed;
+  const AppBars({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class AppBars extends StatelessWidget implements PreferredSize{
       leading: IconButton(onPressed: (){}, icon: Icon(Icons.shopping_bag_rounded)),
       title: Text("BUDG - Gestion Budget"),
       actions: [
-        IconButton(onPressed: (){}, icon: Icon(Icons.add_circle))
+        IconButton(onPressed: onPressed, icon: Icon(Icons.add_circle))
       ],
     );
   }
