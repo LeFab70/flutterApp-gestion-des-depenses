@@ -6,7 +6,7 @@ class AppBars extends StatelessWidget implements PreferredSize{
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      toolbarHeight: 150.00,
+      toolbarHeight: 100.00,
       leading: IconButton(onPressed: (){}, icon: Icon(Icons.shopping_bag_rounded)),
       title: Text("BUDG - Gestion Budget"),
       actions: [
@@ -17,7 +17,7 @@ class AppBars extends StatelessWidget implements PreferredSize{
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => const Size.fromHeight(150.00); //kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(100.00); //kToolbarHeight);
 
   @override
   // TODO: implement child

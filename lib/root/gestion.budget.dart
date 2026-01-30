@@ -10,12 +10,15 @@ class GestionBudget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+
         primaryColor: AppColors.primary,
         //couleur arriere plan principal
         scaffoldBackgroundColor: AppColors.backgroundApp,
         //Couleur app bar
         appBarTheme: AppBarTheme(
-          elevation: 4,
+
+          elevation: 10,
+          shape: RoundedRectangleBorder(),
           toolbarHeight: 130.00,
           backgroundColor: AppColors.buttonBackground,
           foregroundColor: AppColors.backgroundApp,
@@ -25,6 +28,12 @@ class GestionBudget extends StatelessWidget {
             size: 30,
           ),
         ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: AppColors.buttonBackground,
+          foregroundColor: AppColors.buttonTextColor,
+          elevation: 10,
+          shape: CircleBorder(),
+        ),
         // iconButtonTheme: IconButtonThemeData(
         //   style: IconButton.styleFrom(
         //     foregroundColor: AppColors.buttonTextColor,
@@ -33,10 +42,11 @@ class GestionBudget extends StatelessWidget {
         //   ),
         // ),
         //Couleur floating button
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: AppColors.buttonBackground,
-          foregroundColor: AppColors.buttonTextColor,
-        ),
+        // bottomAppBarTheme: BottomAppBarTheme(
+        //   shape: CircularNotchedRectangle(), // L'encoche
+        //   notchMargin: 8.0,                  // L'espace autour du FAB
+        //   elevation: 5,
+        // ),
       ),
       home: GestionBudgetHome(),
     );

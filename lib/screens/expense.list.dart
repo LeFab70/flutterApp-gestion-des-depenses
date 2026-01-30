@@ -8,22 +8,32 @@ class ExpenseList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(child:
-        expenseList.isEmpty ?
+    return expenseList.isEmpty ?
         Center(
           child: Text("Aucune depenses pour le moment",
             style: TextStyle(fontSize: 20, color: AppColors.textColor),),
-        ):
-            ListView.builder(
-              itemCount: expenseList.length,
-              itemBuilder: (context,index){
+        ) :
+        ListView.builder(
+            itemCount: expenseList.length,
+            itemBuilder: (context, index) {
+              final expense = expenseList[index];
+              return Dismissible(key: ValueKey(expense),
+                  direction: DismissDirection.endToStart,
+                  onDismissed: (direction) {
+                    /*supprmier expenses; */
+                  },
+              background: Container(
+                color: AppColors.error,
+                alignment: Alignment.center,
+                padding: EdgeInsets.only(right: 20),
+                child: Icon(Icons.delete,color: AppColors.buttonTextColor,),
+              ),
+                child: Center(
+                  child: Text("Encours"),
+                ),
+              );
 
-              },
-            )
-        )
-      ],
-    );
+            },
+        );
   }
 }
